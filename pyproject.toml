@@ -1,0 +1,23 @@
+[project]
+name = "laboratory-robust-environment-management"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "pandas>=3.0.0",
+    "scikit-learn>=1.8.0",
+    "torch==2.2.2",
+    "torchaudio>=2.2.2",
+    "torchvision>=0.17.2",
+]
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+torchaudio = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
