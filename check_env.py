@@ -1,25 +1,29 @@
 import sys 
 
 import pandas as pd 
-import sklearn
+from sklearn import __version__ as sklearn_version
 import torch
 
 def main (): 
     print("Python:", sys.version.split()[0])
     print("pandas:", pd.__version__)
-    print("scikit-learn:", sklearn.__version__)
+    print("scikit-learn:", sklearn_version)
     print("torch:", torch.__version__) 
 
 # Accelerator check
-    if torch.cuda.is_available():
-        device = "cuda"
-        print("GPU available: CUDA")
-    elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-        device = "mps"
-        print("GPU available: Apple MPS")
-    else:
-        device = "cpu"
-        print("GPU not available — using CPU")
+
+if torch.cuda.is_available():
+    device = "cuda"
+    print("GPU available: CUDA")
+
+elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+    device = "mps"
+    print("GPU available: Apple MPS")
+
+else:
+    device = "cpu"
+    print("GPU not available — using CPU")
+
     
     
     # Tensor computation test
