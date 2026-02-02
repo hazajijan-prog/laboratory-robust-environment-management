@@ -20,7 +20,7 @@ def main ():
     else:
         device = "cpu"
         print("GPU not available — using CPU")
-
+    
     
     # Tensor computation test
     x = torch.tensor([1.0, 2.0, 3.0], device=device)
@@ -30,6 +30,8 @@ def main ():
 
     print("uv runTensor computation result:", z)
     print("Environment verification complete!")
+    print()
+    print()
 
 
 if __name__ == "__main__":
