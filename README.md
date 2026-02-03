@@ -21,16 +21,16 @@ Repo:t innehåller:
 
 För att verifiera att miljön fungerar korrekt kör:
 
-uv run check_env.py
+```uv run check_env.py```
 
 ---
 
-### Reflektion: Problem och lösningar under miljöuppsättningen
+## Reflektion: Problem och lösningar under miljöuppsättningen
 Under arbetet upptäckte jag snabbt att maskininlärningsmiljöer kan vara känsliga för versionskonflikter mellan bibliotek.
 
 Detta projekt handlade därför inte bara om att installera paket, utan om att förstå varför vissa versioner och val behövdes för att få en stabil miljö.
 
-### Problem jag stötte på:
+## Problem jag stötte på:
 #### Problem 1: PyTorch kunde inte installeras
 
 PyTorch kunde inte installeras med vissa versioner:
@@ -38,12 +38,9 @@ PyTorch kunde inte installeras med vissa versioner:
 torch==2.10.0 can't be installed
 because it doesn't have a wheel for the current platform
 
-
 Orsak: Versionen saknade stöd för Intel macOS.
-
 Lösning:
 torch==2.2.2
-
 
 Reflektion:
 Stora ML-bibliotek som PyTorch kräver att rätt binära version (“wheel”) finns tillgänglig för operativsystemet.
