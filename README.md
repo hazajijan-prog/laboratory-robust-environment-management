@@ -16,14 +16,15 @@ Repo:t innehåller:
 - `check_env.py` – script som verifierar att miljön fungerar korrekt  
 - `README.md` – instruktioner och reflektion kring uppgiften  
 
----
 
 ## Kör verifieringen
 
 För att verifiera att miljön fungerar korrekt kör:
 
-```bash
+``bash
 uv run check_env.py
+
+---
 
 Reflektion: Problem och lösningar under miljöuppsättningen
 Under arbetet upptäckte jag snabbt att maskininlärningsmiljöer kan vara känsliga för versionskonflikter mellan bibliotek.
