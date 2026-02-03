@@ -21,18 +21,17 @@ Repo:t innehåller:
 
 För att verifiera att miljön fungerar korrekt kör:
 
-``bash
 uv run check_env.py
 
 ---
 
-Reflektion: Problem och lösningar under miljöuppsättningen
+### Reflektion: Problem och lösningar under miljöuppsättningen
 Under arbetet upptäckte jag snabbt att maskininlärningsmiljöer kan vara känsliga för versionskonflikter mellan bibliotek.
 
 Detta projekt handlade därför inte bara om att installera paket, utan om att förstå varför vissa versioner och val behövdes för att få en stabil miljö.
 
-Problem jag stötte på:
-Problem 1: PyTorch kunde inte installeras
+### Problem jag stötte på:
+#### Problem 1: PyTorch kunde inte installeras
 
 PyTorch kunde inte installeras med vissa versioner:
 
