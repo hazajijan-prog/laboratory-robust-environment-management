@@ -19,11 +19,34 @@ Repo:t innehåller:
 
 ## Kör verifieringen
 
-För att verifiera att miljön fungerar korrekt, kör:
+För att köra projektet på en ny dator och verifiera att miljön fungerar korrekt:
 
+1. **Kontrollera om uv är installerat**
 ```bash
-uv run check_env.py
+   uv --version
 ```
+   Om inte, installera det:
+```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+2. **Klona projektet**
+```bash
+   git clone https://github.com/hazajijan-prog/laboratory-robust-environment-management.git
+   cd laboratory-robust-environment-management
+```
+
+3. **Synka miljön**
+```bash
+   uv sync
+```
+
+4. **Kör verifieringsskriptet**
+```bash
+   uv run check_env.py
+```
+
+Skriptet kommer att validera att alla paket är korrekt installerade och rapportera GPU/accelerator status.
 
 ---
 
@@ -115,10 +138,10 @@ Import "torch" could not be resolved (Pylance)
 
 `check_env.py` kontrollerar:
 
-- ✓ Python-version
-- ✓ Versioner för pandas, scikit-learn och torch
-- ✓ GPU-stöd (CUDA/MPS/CPU)
-- ✓ En enkel tensorberäkning
+- Python-version
+- Versioner för pandas, scikit-learn och torch
+- GPU-stöd (CUDA/MPS/CPU)
+- En enkel tensorberäkning
 
 ---
 
